@@ -189,17 +189,24 @@ by clicking at the delete button on the item menu, you will be prompt to confirm
 -   **filter**: the filter allows filter of item via title
 -   **no item notice**: when there is no item, no item in todo list will pop up
 
-### enhancement and limitation
+## enhancement and limitation
 
-#### limitation
+### limitation
 
 -   filter can only filter on title
 -   upon turn off stages, the relative move to stage button is not switched off
 -   localstorage only has 5MB size
 -   no collaboration is allowed
 
-#### enhancement
+### enhancement
 
 -   use a backend server to persist the stage to overcome a 5MB limit
 -   implement opensearch for searching and filtering
 -   implement websocket and user id to allow sharing across multiple people within group
+
+## difficulties encountered
+
+-   debug why dnd not working
+    -   useEffect would render twice in react strict mode which dnd is heavily rely on
+-   get over eslint
+    -   in my past experience, we will ocassionally turn off some eslint rules to facilitate development speed, but this time without modifying eslint rules, it will require more study of what each rule is about, what problem are they trying to solve and why they are important.
